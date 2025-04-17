@@ -1,1 +1,11 @@
-# engeto_project_4
+Popis mezivýsledků
+1.	Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
+Pro každý rok a daný industry_name se porovnává, zda došlo k nárůstu nebo poklesu průměrné mzdy oproti minulému roku a je zaznamenáno v dalším sloupci wage_change.  Z výsledné tabulky vyplývá, že v některých odvětvích došlo v minulých letech k poslesu průměrných mezd.
+2.	Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
+K dispoyici máme data za období od roku 2007-2015, v query použijeme tedy podmínku, že hledáme výsledek pouze pro období roku 2007 a 2015. Z výsledné tabulky vidíme, kolik litrů mléka a kilogramů chleba jsme si v daném období mohli koupit. V query používáme zaokrouhlenou průměrnou roční hodnotu ceny chleba nebo mléka a průměrný roční plat za všechna dostupná odvětví.
+3.	Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)? 
+Pro zjednodušení jsem použila ceny potravin v roce 2007 a 2015 a spočítala jejich rozdíl, který je v novém sloupci percentage_change výsledné tabulky. Výsledky jsou seřazené podle procentuální změny od nejmenšího po největší. Nejpomaleji zdražují banány, jablka a vepřová pečeně.
+4.	Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?
+K této otázce jsem přistupovala tak, že jsem si ve výsledné tabulce spočítala procentuální změny cen potravin a mezd a spočítala si jejich rozdíl. Z výsledné tabulky vidíme, že v žádném roce nedošlo k nárůstu většímu než 10%. K největšímu nárůstu došlo 2013.
+5.	Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo následujícím roce výraznějším růstem?
+Tuto otázku jsem řešila spojením primary secondary tabulek na základě daného roku. HDP se v tabulce vyskytovalo vícekrát a nejdříve bylo potřeba tyto hodnoty zprůměrovat a získat za daný rok jednu hodnotu. Výsledkem query je tabulka, která nam vrátí růst nebo pokles spočtenou oproti předchozímu roku. Z výsledné tabulky tedy vidíme, že není přímá korelace mezi růstem HDP, mzdami a cenami jednoznačná ve všech letech. 
